@@ -32,7 +32,7 @@ function loginView()
 }
 ```
 
-####URL routing:
+####URLz:
     
 ```bash
 if [ "$REQUEST" == "/login" ]
