@@ -1,6 +1,8 @@
 lol-web-framework
 =================
 
+A web framework written in bash and netcat, for the lulz. Warning: Don't actually use this for anything.
+
 Make sure netcat is installed and can be accessed using the "nc" command.
 
 ### Run your website:
