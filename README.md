@@ -16,7 +16,7 @@ Make sure netcat is installed and can be accessed using the "nc" command.
 Visit: http://127.0.0.1:5000/home
 
 
-####Views:
+####Viewz:
     
     function homeView()
     {
