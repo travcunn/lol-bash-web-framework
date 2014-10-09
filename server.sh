@@ -19,9 +19,9 @@ function setup()
 function routeURL(){
     request=$1
 
-    for K in "${!URLS[@]}";
+    for URL in "${!URLS[@]}";
     do
-        if [ "$REQUEST" == "$K" ]
+        if [ "$REQUEST" == "$URL" ]
         then
             local viewname="${URLS["${!URLS[@]}"]}"
             local view=$("$viewname")
