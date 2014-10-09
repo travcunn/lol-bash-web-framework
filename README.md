@@ -1,4 +1,4 @@
-lol-web-framework
+lol-bash-web-framework
 =================
 A web framework written in bash.
 
