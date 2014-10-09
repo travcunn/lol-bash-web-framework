@@ -14,9 +14,9 @@ function loginView()
 
 function setup()
 {
-    rm -f out
-    mkfifo out
-    trap "rm -f out" EXIT
+    rm -f /tmp/out
+    mkfifo /tmp/out
+    trap "rm -f /tmp/out" EXIT
 }
 
 function runServer()
@@ -24,7 +24,7 @@ function runServer()
     setup
     while true
     do
-    cat out | nc -l $PORT > >(
+    cat /tmp/out | nc -l $PORT > >(
         export REQUEST=
         while read line
         do
@@ -41,7 +41,7 @@ function runServer()
             then
                 RESPONSE=$(homeView)
             fi
-            echo -en "HTTP/1.0 200 OK\nContent-Type: text/html\nContent-Length: ${#RESPONSE}\n\n$RESPONSE" > out
+            echo -en "HTTP/1.0 200 OK\nContent-Type: text/html\nContent-Length: ${#RESPONSE}\n\n$RESPONSE" > /tmp/out
         fi
         done
     )
