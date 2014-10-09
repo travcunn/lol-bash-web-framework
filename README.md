@@ -30,18 +30,21 @@ function loginView()
     local view=$(cat views/login.html)
     echo "$view"
 }
+
+: '
+# Implement a custom 404 view.
+function 404View()
+{
+    echo "<h1>404 Not Found</h1>"
+}
+'
 ```
 
 ####urls.sh:
     
 ```bash
-if [ "$REQUEST" == "/login" ]
-then
-    RESPONSE=$(loginView)
-elif [ "$REQUEST" == "/home" ]
-then
-    RESPONSE=$(homeView)
-fi
+# URLs for routing to views
+URLS=( ["/home"]=homeView )
 ```
 
 ####Host configuration:
