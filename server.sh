@@ -6,7 +6,6 @@ source views.sh
 declare -A URLS
 source urls.sh
 
-${URLS["/home"]}
 
 function setup()
 {
@@ -24,8 +23,10 @@ function routeURL(){
         if [ "$REQUEST" == "$URL" ]
         then
             local viewname="${URLS["${!URLS[@]}"]}"
-            local view=$("$viewname")
+        else
+            local viewname="404View"
         fi
+        local view=$("$viewname")
     done
 
     echo "$view"
