@@ -1,22 +1,33 @@
-PORT=5000
+#!/usr/bin/env bash
 
-function homeView()
-{
-    local view=$(cat views/index.html)
-    echo "$view"
-}
+source config.sh
+source views.sh
 
-function loginView()
-{
-    local view=$(cat views/login.html)
-    echo "$view"
-}
+declare -A URLS
+source urls.sh
+
+${URLS["/home"]}
 
 function setup()
 {
     rm -f /tmp/out
     mkfifo /tmp/out
     trap "rm -f /tmp/out" EXIT
+}
+
+# Return a view
+function routeURL(){
+    request=$1
+
+    if [ "$REQUEST" == "/login" ]
+    then
+        local view=$(loginView)
+    elif [ "$REQUEST" == "/home" ]
+    then
+        local view=$(homeView)
+    fi
+
+    echo "$view"
 }
 
 function runServer()
@@ -34,13 +45,7 @@ function runServer()
             REQUEST=$(echo "$line" | cut -d ' ' -f2)
         elif [ "x$line" = x ]
         then
-            if [ "$REQUEST" == "/login" ]
-            then
-                RESPONSE=$(loginView)
-            elif [ "$REQUEST" == "/home" ]
-            then
-                RESPONSE=$(homeView)
-            fi
+            RESPONSE=$(routeURL REQUEST)
             echo -en "HTTP/1.0 200 OK\nContent-Type: text/html\nContent-Length: ${#RESPONSE}\n\n$RESPONSE" > /tmp/out
         fi
         done
