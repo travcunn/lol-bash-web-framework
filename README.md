@@ -41,6 +41,12 @@ Visit: http://127.0.0.1:5000/home
         RESPONSE=$(homeView)
     fi
 
+
+####Host configuration:
+The default port is 5000, but can be changed in server.sh by editing the "PORT" variable:
+    
+    PORT=5000
+
 Support for error handling, custom status codes, and better URL routing coming soon.
 
 ######Warning: Don't actually use this for anything.
