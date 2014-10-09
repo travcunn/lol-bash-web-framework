@@ -14,6 +14,18 @@ function setup()
     trap "rm -f /tmp/out" EXIT
 }
 
+# Default 404 view if not present in the views
+function Default404View()
+{
+    echo "<h1>404 Not Found</h1>"
+}
+
+# Check if URL route exists
+function routeExists() {
+    declare -f -F $1 > /dev/null
+    return $?
+}
+
 # Return a view
 function routeURL(){
     request=$1
@@ -24,7 +36,12 @@ function routeURL(){
         then
             local viewname="${URLS["${!URLS[@]}"]}"
         else
-            local viewname="404View"
+            if routeExists "404View"
+            then
+                local viewname="404View"
+            else
+                local viewname="Default404View"
+            fi
         fi
         local view=$("$viewname")
     done

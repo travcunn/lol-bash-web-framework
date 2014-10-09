@@ -12,7 +12,11 @@ function loginView()
     echo "$view"
 }
 
+
+: '
+# Implement a custom 404 view.
 function 404View()
 {
     echo "<h1>404 Not Found</h1>"
 }
+'
