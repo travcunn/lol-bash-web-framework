@@ -55,6 +55,6 @@ The default port is 5000, but can be changed in config.sh by editing the "PORT" 
 PORT=5000
 ```
 
-Support for custom status codes, SSL, and better URL routing coming soon.
+Feel free to add additional functionality. Ideas: custom status codes for views, SSL, regex URL routing, templating....
 
 ######Warning: Don't actually use this for anything.
