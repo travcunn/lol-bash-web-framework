@@ -1,6 +1,6 @@
 lol-web-framework
 =================
-A web framework written in bash, for the lulz.
+A web framework written in bash.
 
 "Look at mah new framework, it does all the things!"
 ![yolo](http://media.tumblr.com/0fc9023daa303558d036ecd63fd2c24e/tumblr_mjedslIPPH1qbyxr0o1_500.gif)
