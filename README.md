@@ -31,7 +31,7 @@ Visit: http://127.0.0.1:5000/home
     }
 
 
-####URL routing for views:
+####URL routing:
     
     if [ "$REQUEST" == "/login" ]
     then
