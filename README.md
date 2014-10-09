@@ -8,7 +8,7 @@ A web framework written in bash.
 <sub>source: [nodejs reactions](http://nodejsreactions.tumblr.com/post/71649072477/look-at-mah-new-framework-it-does-all-the-things)</sub>
 
 
-Make sure netcat is installed and can be accessed using the "nc" command.
+Make sure netcat is installed.
 
 ### Start the internetz:
     ./server.sh
@@ -54,6 +54,6 @@ The default port is 5000, but can be changed in config.sh by editing the "PORT" 
 PORT=5000
 ```
 
-Support for error handling, custom status codes, and better URL routing coming soon.
+Support for custom status codes, SSL, and better URL routing coming soon.
 
 ######Warning: Don't actually use this for anything.
