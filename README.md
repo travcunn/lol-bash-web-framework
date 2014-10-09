@@ -8,9 +8,10 @@ A web framework written in bash.
 <sub>source: [nodejs reactions](http://nodejsreactions.tumblr.com/post/71649072477/look-at-mah-new-framework-it-does-all-the-things)</sub>
 
 
+###Requirementz
 Make sure netcat is installed.
 
-### Start the internetz:
+###Start the internetz:
     ./server.sh
     
 Visit: http://127.0.0.1:5000/home
