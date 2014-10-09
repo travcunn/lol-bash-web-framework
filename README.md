@@ -1,6 +1,6 @@
 lol-web-framework
 =================
-A web framework written in bash and netcat, for the lulz. Warning: Don't actually use this for anything.
+A web framework written in bash and netcat, for the lulz.
 
 "Look at mah new framework, it does all the things!"
 ![yolo](http://media.tumblr.com/0fc9023daa303558d036ecd63fd2c24e/tumblr_mjedslIPPH1qbyxr0o1_500.gif)
@@ -42,3 +42,5 @@ Visit: http://127.0.0.1:5000/home
     fi
 
 Support for error handling, custom status codes, and better URL routing coming soon.
+
+######Warning: Don't actually use this for anything.
