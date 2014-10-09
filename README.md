@@ -45,7 +45,7 @@ fi
 ```
 
 ####Host configuration:
-The default port is 5000, but can be changed in server.sh by editing the "PORT" variable:
+The default port is 5000, but can be changed in config.sh by editing the "PORT" variable:
 
 ```bash
 PORT=5000
