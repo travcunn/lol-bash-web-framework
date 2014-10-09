@@ -10,7 +10,7 @@ source: [nodejs reactions](http://nodejsreactions.tumblr.com/post/71649072477/lo
 
 Make sure netcat is installed and can be accessed using the "nc" command.
 
-### Run your website:
+### Start the internetz:
     ./server.sh
     
 Visit: http://127.0.0.1:5000/home
