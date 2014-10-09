@@ -19,13 +19,14 @@ function setup()
 function routeURL(){
     request=$1
 
-    if [ "$REQUEST" == "/login" ]
-    then
-        local view=$(loginView)
-    elif [ "$REQUEST" == "/home" ]
-    then
-        local view=$(homeView)
-    fi
+    for K in "${!URLS[@]}";
+    do
+        if [ "$REQUEST" == "$K" ]
+        then
+            local viewname="${URLS["${!URLS[@]}"]}"
+            local view=$("$viewname")
+        fi
+    done
 
     echo "$view"
 }
